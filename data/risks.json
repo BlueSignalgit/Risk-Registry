@@ -1,0 +1,127 @@
+{
+  "company": "Offensive Defenders",
+  "description": "Outsourced penetration testing consulting",
+  "methodology": {
+    "likelihood": "1 Rare · 2 Unlikely · 3 Possible · 4 Likely · 5 Almost Certain",
+    "impact": "1 Negligible · 2 Minor · 3 Moderate · 4 Major · 5 Severe",
+    "scoring": "Likelihood × Impact",
+    "bands": {
+      "low": "1–7",
+      "medium": "8–14",
+      "high": "15–19",
+      "critical": "20–25"
+    }
+  },
+  "disclaimer": "Demonstration data. All risks, ratings, owners, and dates are illustrative.",
+  "risks": [
+    {
+      "id": "R001",
+      "title": "Penetration testing outside authorized scope",
+      "category": "Legal & Operational",
+      "likelihood": 3,
+      "impact": 5,
+      "owner": "Engagement Manager",
+      "status": "Mitigation Planned",
+      "description": "An outsourced penetration tester accesses systems, networks, or accounts not explicitly authorized in the signed rules of engagement.",
+      "consequences": "Service interruption, legal liability, contractual disputes, loss of client trust.",
+      "controls": [
+        "Signed scope and rules of engagement",
+        "Client-approved target inventory"
+      ],
+      "mitigation": [
+        "Require written approval for scope changes",
+        "Enforce pre-engagement scope briefings",
+        "Maintain time-stamped testing logs",
+        "Pause and escalate unexpected access"
+      ],
+      "review": "2026-11-25"
+    },
+    {
+      "id": "R002",
+      "title": "Leakage of client company data",
+      "category": "Confidentiality",
+      "likelihood": 4,
+      "impact": 5,
+      "owner": "Security Lead",
+      "status": "In Progress",
+      "description": "Sensitive data obtained during client engagements is exposed through insecure storage, transfers, contractor devices, or accidental disclosure.",
+      "consequences": "Confidentiality breach, regulatory exposure, financial loss, reputational damage.",
+      "controls": [
+        "Nondisclosure agreements",
+        "Restricted report distribution"
+      ],
+      "mitigation": [
+        "Use encrypted client-approved storage and transfer",
+        "Enforce least privilege and MFA",
+        "Define retention and secure deletion procedures",
+        "Maintain a breach-response playbook"
+      ],
+      "review": "2026-11-15"
+    },
+    {
+      "id": "R003",
+      "title": "Compromised pentester accounts or devices",
+      "category": "Identity & Access",
+      "likelihood": 3,
+      "impact": 5,
+      "owner": "Security Lead",
+      "status": "Mitigation Planned",
+      "description": "An attacker compromises a contracted tester's credentials or device and gains access to engagement tooling or client environments.",
+      "consequences": "Unauthorized access, stolen evidence, interruption of testing, breach notification costs.",
+      "controls": [
+        "Unique contractor accounts",
+        "Time-limited engagement access"
+      ],
+      "mitigation": [
+        "Require phishing-resistant MFA where supported",
+        "Verify device security before access",
+        "Revoke access at engagement close",
+        "Monitor privileged sessions and anomalous logins"
+      ],
+      "review": "2026-11-25"
+    },
+    {
+      "id": "R004",
+      "title": "Insufficient vetting of outsourced testers",
+      "category": "Third-Party Management",
+      "likelihood": 3,
+      "impact": 4,
+      "owner": "Vendor Manager",
+      "status": "Not Started",
+      "description": "A contractor without adequate skills, references, or security practices is assigned to a sensitive client assessment.",
+      "consequences": "Poor testing quality, compliance gaps, damage to client systems, client dissatisfaction.",
+      "controls": [
+        "Contractor onboarding checklist"
+      ],
+      "mitigation": [
+        "Verify experience and relevant credentials",
+        "Conduct technical screening and reference checks",
+        "Require code of conduct and confidentiality agreement",
+        "Perform periodic performance and security reviews"
+      ],
+      "review": "2026-12-01"
+    },
+    {
+      "id": "R005",
+      "title": "Late or inaccurate assessment reports",
+      "category": "Service Delivery",
+      "likelihood": 3,
+      "impact": 4,
+      "owner": "Delivery Manager",
+      "status": "Not Started",
+      "description": "Testing results are incorrectly documented, insufficiently verified, or submitted after contractual deadlines.",
+      "consequences": "Missed vulnerabilities, poor remediation decisions, contract penalties, loss of renewals.",
+      "controls": [
+        "Standard report template",
+        "Project delivery milestones"
+      ],
+      "mitigation": [
+        "Require peer review of critical findings",
+        "Validate evidence and reproducibility",
+        "Track milestones with owner accountability",
+        "Escalate anticipated delivery delays"
+      ],
+      "review": "2026-12-01"
+    }
+  ]
+}
